@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">
+  Visual <span>Gallery</span>
+</h1>
+<p class="subtitle">Explore beautiful moments captured in pictures</p>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+    <button class="active" onclick="filterImages('all', this)">All</button>
+    <button onclick="filterImages('nature', this)">Nature</button>
+    <button onclick="filterImages('city', this)">City</button>
+    <button onclick="filterImages('animals', this)">Animals</button>
+    <button onclick="filterImages('architecture', this)">Architecture</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery" id="gallery">
+
+    <!-- Repeat for 10 images -->
+    <div class="card nature" onclick="openLightbox(0)">
+        <img src="images/img1.jpeg">
+        <span>Nature</span>
+    </div>
+
+    <div class="card nature" onclick="openLightbox(1)">
+        <img src="images/img2.jpeg">
+        <span>Nature</span>
+    </div>
+
+    <div class="card nature" onclick="openLightbox(2)">
+        <img src="images/img3.jpeg">
+        <span>Nature</span>
+    </div>
+
+    <div class="card city" onclick="openLightbox(3)">
+        <img src="images/img4.jpeg">
+        <span>City</span>
+    </div>
+
+    <div class="card animals" onclick="openLightbox(4)">
+        <img src="images/img5.jpeg">
+        <span>Animals</span>
+    </div>
+
+    <div class="card animals" onclick="openLightbox(5)">
+        <img src="images/img6.jpeg">
+        <span>Animals</span>
+    </div>
+
+    <div class="card animals" onclick="openLightbox(6)">
+        <img src="images/img7.jpeg">
+        <span>Animals</span>
+    </div>
+
+    <div class="card city" onclick="openLightbox(7)">
+        <img src="images/img8.jpeg">
+        <span>City</span>
+    </div>
+
+    <div class="card architecture" onclick="openLightbox(8)">
+        <img src="images/img9.jpeg">
+        <span>Architecture</span>
+    </div>
+
+    <div class="card architecture" onclick="openLightbox(9)">
+        <img src="images/img10.jpg">
+        <span>Architecture</span>
+    </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <div class="counter" id="counter"></div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="lightboxImg">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+    <div class="thumbnails" id="thumbnails"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
